@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./styles/mixins.scss";
+@import "./styles/variables.scss";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: $titleColor;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.layout {
+  // position: relative;
+  min-height: 100vh;
+}
+.routes {
+  margin-left: 150px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  @include sm {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2px;
+  }
+  @include md {
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -2px;
+  }
+}
+h3 {
+  font-size: 14px;
+  line-height: 18px;
+
+  @include md {
+    font-size: 18px;
+  }
+}
+h2 {
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0px;
+
+  @include md {
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0px;
+  }
+}
+
+@include sm {
+  .container {
+    width: 570px;
+  }
+}
+@include md {
+  .container {
+    width: 760px;
+  }
+}
+@include lg {
+  .container {
+    width: 970px;
+  }
+}
+@include xl {
+  .container {
+    width: 1180px;
+  }
+}
+@include xxl {
+  .container {
+    width: 1340px;
+  }
+}

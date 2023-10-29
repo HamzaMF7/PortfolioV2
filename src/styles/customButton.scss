@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+.button {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
+  border-radius: $raduis;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $raduis;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    .home-icon {
+      font-size: 25px;
+      line-height: 60px;
+      color: $green;
+    }
+  }
+  .text {
+    font-size: 18px;
+    color: $textColor ;
+    font-weight: 500;
+    line-height: 60px;
+    flex: 1;
+    writing-mode:vertical-lr;
+    transform: rotate(180deg); /* Optionally, you can use this for browser compatibility */
+    white-space: nowrap;
+    display: none;
+  }
+  &:hover {
+    height: 155px;
+  }
+  &:hover {
+    .text {
+      display: inline;
+    }
+  }
+}

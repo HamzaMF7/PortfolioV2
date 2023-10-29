@@ -1,0 +1,72 @@
+@import "../styles/variables.scss";
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+  .degree {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: $raduis;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    // .dot{
+    //     height: 16px;
+    //     width: 16px;
+    //     background-color: $green;
+    //     position: absolute;
+    //     left: calc(50% - 8px);
+    //     border-radius: 50%;
+    //     top:10px;
+    // }
+    .pulse {
+      height: 14px;
+      width: 14px;
+      background-color: $green;
+      position: absolute;
+      left: calc(50% - 8px);
+      border-radius: 50%;
+      top: 10px;
+      span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        border-radius: inherit;
+        inset: 0;
+        opacity: .8;
+        animation: pulseAnimate 4s ease-out infinite;
+        animation-delay: calc(1s * var(--i));
+      }
+    }
+    .academy {
+      color: $green;
+      text-transform: capitalize;
+    }
+    .title-degree {
+      margin: 10px 0;
+      font-weight: $semiBold;
+      text-transform: capitalize;
+      color: $darkGray;
+    }
+    .desc {
+      color: $textColor;
+    }
+  }
+  &:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    // text-align: right;
+  }
+  &:nth-child(even) {
+    padding-left: calc(50% + 30px);
+  }
+}
+
+
+@keyframes pulseAnimate {
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    
+}

@@ -1,0 +1,15 @@
+
+
+
+.nav-links {
+    width: fit-content;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+  }
+}

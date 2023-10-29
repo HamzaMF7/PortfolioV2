@@ -1,0 +1,83 @@
+@import "./variables.scss";
+
+.add {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: $raduis;
+  margin-bottom: 20px;
+  overflow: hidden;
+  max-height: 52px; /* Adjust this value to your desired collapsed height */
+  transition: max-height 0.3s ease;
+  .add-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    height: 35px;
+    margin-bottom: 15px;
+  
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+      color: $textColor;
+    }
+    .arrow-icon {
+      font-size: 20px;
+    }
+  }
+  .items {
+    margin: 20px 0;
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      input,
+      textarea {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        max-width: 1000px;
+        border-radius: $raduis;
+        padding: 15px 20px;
+      }
+      .education,
+      .title {
+        flex: 1;
+        input {
+          width: 100%;
+        }
+      }
+      .error {
+        color: red;
+        margin-left: 20px;
+        font-size: 14px;
+      }
+      .textarea {
+        width: 100%;
+        textarea {
+          width: 100%;
+          height: 100px;
+        }
+      }
+      button {
+        padding: 10px 25px;
+        border-radius: 12px;
+        border: none;
+        background: $titleColor;
+        color: white;
+        &:disabled {
+          opacity: 0.35;
+        }
+      }
+    }
+  }
+}
+
+.expanded {
+  max-height: 1000px; /* Adjust this value to your desired expanded height */
+}

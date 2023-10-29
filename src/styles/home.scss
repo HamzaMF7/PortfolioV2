@@ -1,0 +1,99 @@
+@import "../styles/variables.scss";
+.home {
+  height: 100vh;
+  .section {
+    height: calc(100vh - 371px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .about {
+      max-width: 770px;
+      min-height: 460px;
+      .info {
+        h1 {
+          margin-bottom: 10px;
+          color: $darkGray;
+        }
+        p{
+          color: $textColor;
+        }
+      }
+      .extra-info {
+        margin: 48px 0;
+        .location,
+        .available {
+          width: fit-content;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0 5px;
+          color: $textColor;
+          .location-icon {
+            color: $textColor;
+            font-size: 24px;
+          }
+        }
+        .available {
+          .circle-icon {
+            font-size: 20px;
+            color: $green;
+          }
+        }
+      }
+      .social-media {
+        li {
+          display: inline-block;
+          padding: 0 6px;
+          a {
+            :first-child {
+              font-size: 24px;
+              color: $textColor;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      flex: 1;
+      position: relative;
+      min-height: 460px;
+      .my-img {
+        width: 310px;
+        height: 285px;
+        position: relative;
+        left: 30px;
+        background-color: $white;
+
+        img {
+          width: 300px;
+        }
+      }
+      .bg-img {
+        width: 300px;
+        height: 300px;
+        background-color: $secondBgColor;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        bottom: -80px;
+        z-index: -10;
+      }
+    }
+    .btn {
+      button {
+        cursor: pointer;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 12px;
+        background: $darkGray;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 0 8px ;
+      }
+    }
+  }
+}
