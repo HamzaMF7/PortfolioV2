@@ -1,10 +1,10 @@
 import React from "react";
-import Tag from "./Tag";
 import "../styles/project.scss";
 import { CiShare1 } from "react-icons/ci";
+import Tag from "./Tag";
+
 import AOS from "aos";
 import "../../node_modules/aos/dist/aos.css";
-
 AOS.init();
 
 const Project = ({ image, name, description, language, lien }) => {
@@ -17,7 +17,7 @@ const Project = ({ image, name, description, language, lien }) => {
         <h2>{name}</h2>
         <p>{description}</p>
         <div className="tools">
-          {language?.map((e , index) => (
+          {language?.map((e, index) => (
             <Tag title={e} key={index} />
           ))}
         </div>

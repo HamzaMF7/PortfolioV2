@@ -21,7 +21,6 @@ const Resume = () => {
   return (
     <div className="Resume">
       {isLoading && <LoadingOverlay />}
-      {/* <LoadingOverlay /> */}
       <Heading
         title="Resume"
         text="Here is a quick summary of my education and certifications"

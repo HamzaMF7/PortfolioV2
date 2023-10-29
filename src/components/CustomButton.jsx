@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/customButton.scss";
-import { AiFillHome } from "react-icons/ai";
 
 const CustomButton = ({ icon: IconComponent, text }) => {
   return (

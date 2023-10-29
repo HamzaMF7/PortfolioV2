@@ -1,10 +1,8 @@
 import React from "react";
-import { Link, RouterProvider } from "react-router-dom";
-import CustomButton from "./CustomButton";
 import "../styles/navLinks.scss";
-import { AiFillHome } from "react-icons/ai";
-import { AiFillFile } from "react-icons/ai";
-import { AiFillAppstore } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import CustomButton from "./CustomButton";
+import { AiFillHome, AiFillFile, AiFillAppstore } from "react-icons/ai";
 
 const NavLinks = () => {
   return (

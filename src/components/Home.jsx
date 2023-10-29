@@ -1,23 +1,25 @@
 import React from "react";
 import "../styles/home.scss";
-import AOS from "aos";
-import "../../node_modules/aos/dist/aos.css";
-import { SlSocialFacebook } from "react-icons/sl";
-import { SlSocialGithub } from "react-icons/sl";
-import { SlSocialLinkedin } from "react-icons/sl";
-import { SlLocationPin } from "react-icons/sl";
+import {
+  SlSocialFacebook,
+  SlSocialGithub,
+  SlSocialLinkedin,
+  SlLocationPin,
+} from "react-icons/sl";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { VscCircleFilled } from "react-icons/vsc";
 import { FiDownloadCloud } from "react-icons/fi";
 import hamza from "../assets/myPhoto.jpg";
 import CV from "../assets/img/CV_hamza_maerof.pdf";
-import Tag from "./Tag";
 import Heading from "./Heading";
+
+import AOS from "aos";
+import "../../node_modules/aos/dist/aos.css";
 AOS.init();
 
 const Home = () => {
   return (
-    <div className="home" >
+    <div className="home">
       <header>
         <Heading title="Home" />
       </header>
@@ -36,7 +38,7 @@ const Home = () => {
           </div>
           <div className="extra-info">
             <div className="location">
-              <SlLocationPin className="location-icon"/>
+              <SlLocationPin className="location-icon" />
               <span>Ben ahmed, Settat</span>
             </div>
             <div className="available">
@@ -44,7 +46,7 @@ const Home = () => {
               <span>Available for new projects</span>
             </div>
           </div>
-          <ul class="social-media">
+          <ul className="social-media">
             <li>
               <a href="#">
                 <SlSocialFacebook />
@@ -76,14 +78,14 @@ const Home = () => {
           </div>
           <div className="bg-img"></div>
         </div>
-        <div class="btn">
-        <a href={CV} download="CV_hamza_maerof.pdf">
-          <button>
-            <FiDownloadCloud/>
-            <span>Download CV</span>
-          </button>
-        </a>
-      </div>
+        <div className="btn">
+          <a href={CV} download="CV_hamza_maerof.pdf">
+            <button>
+              <FiDownloadCloud />
+              <span>Download CV</span>
+            </button>
+          </a>
+        </div>
       </section>
     </div>
   );

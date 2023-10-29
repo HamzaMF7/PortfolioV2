@@ -14,22 +14,6 @@ export const getProjects = createAsyncThunk(
   }
 );
 
-// export const deleteCustomer = createAsyncThunk(
-//   "customer/delete-customer",
-//   async (id, thunkAPI) => {
-//     try {
-//       const response = await axios.delete(`${URL}/api/customer/${id}`, {
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       });
-//       return response.data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error);
-//     }
-//   }
-// );
-
 const initialState = {
   projects: [],
   isError: false,
@@ -38,7 +22,6 @@ const initialState = {
   message: "",
 };
 export const resetState = createAction("Reset_all");
-export const restESL = createAction("Reset_Loading&Success&Error");
 
 const projectSlice = createSlice({
   name: "projects",
@@ -60,26 +43,7 @@ const projectSlice = createSlice({
         state.isSuccess = false;
         state.message = action.error;
       })
-      //   .addCase(deleteCustomer.pending, (state) => {
-      //     state.isLoading = true;
-      //   })
-      //   .addCase(deleteCustomer.fulfilled, (state, action) => {
-      //     state.isLoading = false;
-      //     state.isError = false;
-      //     state.isSuccess = true;
-      //   })
-      //   .addCase(deleteCustomer.rejected, (state, action) => {
-      //     state.isLoading = false;
-      //     state.isError = true;
-      //     state.isSuccess = false;
-      //     state.message = action.error;
-      //   })
-      .addCase(resetState, () => initialState)
-      .addCase(restESL(), (state) => {
-        state.isLoading = false;
-        state.isError = false;
-        state.isSuccess = false;
-      });
+      .addCase(resetState, () => initialState);
   },
 });
 export default projectSlice.reducer;

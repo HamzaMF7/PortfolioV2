@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
-import { AiOutlineMinus } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
 import "../styles/addItems.scss";
 import { ErrorMessage, Field, Form, Formik } from "formik";
@@ -14,7 +13,7 @@ const AddItems = ({ degreesLength }) => {
 
   const onSubmit = async (values, actions) => {
     const payload = { id: degreesLength + 1, ...values };
-    dispatch(addDegree(payload));
+    await dispatch(addDegree(payload));
     actions.resetForm();
     dispatch(getDegrees());
   };

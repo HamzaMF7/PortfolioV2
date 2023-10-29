@@ -73,7 +73,7 @@ const resumeSlice = createSlice({
         state.isSuccess = false;
         state.message = action.error;
       })
-      .addCase(resetState, () => initialState)
+      .addCase(resetState, () => initialState);
   },
 });
 export default resumeSlice.reducer;

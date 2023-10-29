@@ -2,13 +2,12 @@ import React from "react";
 import "../styles/degree.scss";
 import AOS from "aos";
 import "../../node_modules/aos/dist/aos.css";
-
 AOS.init();
+
 const Degree = ({ title, education, description }) => {
   return (
     <div className="timeline-item" data-aos="zoom-in">
       <div className="degree">
-        {/* <div className="dot"></div> */}
         <div className="pulse">
           <span style={{ "--i": 0 }}></span>
           <span style={{ "--i": 1 }}></span>
