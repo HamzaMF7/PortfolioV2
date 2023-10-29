@@ -1,1 +1,1 @@
-export const URL="http://localhost:8000" ;
+export const URL="https://my-json-server.typicode.com/HamzaMF7/Portfolio-v2" ;
