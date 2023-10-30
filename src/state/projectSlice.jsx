@@ -19,7 +19,6 @@ const initialState = {
   isError: false,
   isLoading: false,
   isSuccess: false,
-  message: "",
 };
 export const resetState = createAction("Reset_all");
 
@@ -41,7 +40,6 @@ const projectSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
       })
       .addCase(resetState, () => initialState);
   },

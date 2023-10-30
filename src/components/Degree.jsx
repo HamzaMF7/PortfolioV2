@@ -1,23 +1,27 @@
-import React from "react";
-import "../styles/degree.scss";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { AiOutlineDelete } from "react-icons/ai";
 import { PiNotePencilDuotone } from "react-icons/pi";
 import AOS from "aos";
-import "../../node_modules/aos/dist/aos.css";
+import "aos/dist/aos.css";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { deleteDegree, getDegrees, showDegree } from "../state/resumeSlice";
+import "../styles/degree.scss";
+
 AOS.init();
 
 const Degree = ({ id, title, education, description }) => {
   const dispatch = useDispatch();
-  const Delete = async () => {
+
+  const deleteDegreeHandler = async () => {
     await dispatch(deleteDegree(id));
     dispatch(getDegrees());
   };
-  const Update = async ()=>{
-    await dispatch(showDegree(id));
-  }
+
+  const updateDegreeHandler = () => {
+    dispatch(showDegree(id));
+  };
+
   return (
     <div className="timeline-item" data-aos="zoom-in">
       <div className="degree">
@@ -31,10 +35,10 @@ const Degree = ({ id, title, education, description }) => {
         <h3 className="title-degree">{title}</h3>
         <p className="desc">{description}</p>
         <div className="icons">
-          <div className="delete" onClick={Delete}>
+          <div className="delete" onClick={deleteDegreeHandler}>
             <AiOutlineDelete />
           </div>
-          <div className="update" onClick={Update}>
+          <div className="update" onClick={updateDegreeHandler}>
             <PiNotePencilDuotone />
           </div>
         </div>

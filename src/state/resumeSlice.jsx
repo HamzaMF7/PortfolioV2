@@ -77,7 +77,6 @@ const initialState = {
   isSuccess: false,
   update: false,
   isExpanded : false ,
-  message: "",
 };
 export const resetState = createAction("Reset_all");
 
@@ -104,7 +103,6 @@ const resumeSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
       })
       .addCase(addDegree.pending, (state) => {
         state.isLoading = true;
@@ -118,7 +116,6 @@ const resumeSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
       })
       .addCase(deleteDegree.pending, (state) => {
         state.isLoading = true;
@@ -132,7 +129,6 @@ const resumeSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
       })
       .addCase(showDegree.pending, (state) => {
         state.isLoading = true;
@@ -148,7 +144,6 @@ const resumeSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
       })
       .addCase(updateDegree.pending, (state) => {
         state.isLoading = true;
@@ -163,7 +158,6 @@ const resumeSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
-        state.message = action.error;
       })
       .addCase(resetState, () => initialState);
   },

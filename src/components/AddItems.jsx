@@ -39,26 +39,27 @@ const AddItems = ({ degreesLength }) => {
     description: degrees.description,
   };
 
-  const Error = () => {
-    return <div className="error"></div>;
-  };
+  const Header = () => (
+    <div className="add-header" onClick={() => dispatch(setIsExpanded())}>
+      <div className="title">
+        <HiOutlineViewGridAdd />
+        {update ? (
+          <p>Update Degree</p>
+        ) : (
+          <>
+            <p>{isExpanded ? "Hide" : "Show"} Add Degree</p>
+            <span className="arrow-icon">
+              {isExpanded ? <AiOutlineMinus /> : <AiOutlinePlus />}
+            </span>
+          </>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <div className={`add ${isExpanded || update ? "expanded" : ""}`}>
-      <div className="add-header" onClick={() => dispatch(setIsExpanded())}>
-        <div className="title">
-          <HiOutlineViewGridAdd />
-          {update ? (
-            <p>Update Degree</p>
-          ) : (
-            <>
-              <p>{isExpanded ? "Hide" : "Show"} Add Degree</p>
-              <span className="arrow-icon">
-                {isExpanded ? <AiOutlineMinus /> : <AiOutlinePlus />}
-              </span>
-            </>
-          )}
-        </div>
-      </div>
+      <Header/>
       <div className="items">
         <Formik
           initialValues={

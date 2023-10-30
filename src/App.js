@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="layout container">
       <NavLinks />
-      <RoutesComponent />
+      <RoutesComponent/>
     </div>
   );
 }
