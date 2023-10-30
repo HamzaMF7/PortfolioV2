@@ -5,46 +5,68 @@ import "../styles/addItems.scss";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { AddItemForm } from "../schemas/AddItemForm";
 import { useDispatch, useSelector } from "react-redux";
-import { addDegree, getDegrees } from "../state/resumeSlice";
+import {
+  addDegree,
+  getDegrees,
+  setIsExpanded,
+  updateDegree,
+} from "../state/resumeSlice";
 
 const AddItems = ({ degreesLength }) => {
   const dispatch = useDispatch();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const { degrees, update, isExpanded } = useSelector((state) => state.resume);
 
-  const onSubmit = async (values, actions) => {
+  const submitNewDegree = async (values, actions) => {
     const payload = { id: degreesLength + 1, ...values };
     await dispatch(addDegree(payload));
     actions.resetForm();
     dispatch(getDegrees());
   };
-  const initialValues = {
+  const submitUpdatingDegree = async (values, actions) => {
+    const payload = { id: degrees.id, ...values };
+    console.log(payload);
+    await dispatch(updateDegree(payload));
+    dispatch(getDegrees());
+  };
+  const addDegree_initialValues = {
     education: "",
     title: "",
     description: "",
   };
-
-  const toggleAddItems = () => {
-    setIsExpanded((prevIsExpanded) => !prevIsExpanded);
+  const updateDegree_initialValues = {
+    education: degrees.education,
+    title: degrees.title,
+    description: degrees.description,
   };
+
   const Error = () => {
     return <div className="error"></div>;
   };
   return (
-    <div className={`add ${isExpanded ? "expanded" : ""}`}>
-      <div className="add-header" onClick={toggleAddItems}>
+    <div className={`add ${isExpanded || update ? "expanded" : ""}`}>
+      <div className="add-header" onClick={() => dispatch(setIsExpanded())}>
         <div className="title">
           <HiOutlineViewGridAdd />
-          <p>{isExpanded ? "Hide" : "Show"} Add Degree</p>
+          {update ? (
+            <p>Update Degree</p>
+          ) : (
+            <>
+              <p>{isExpanded ? "Hide" : "Show"} Add Degree</p>
+              <span className="arrow-icon">
+                {isExpanded ? <AiOutlineMinus /> : <AiOutlinePlus />}
+              </span>
+            </>
+          )}
         </div>
-        <span className="arrow-icon">
-          {isExpanded ? <AiOutlineMinus /> : <AiOutlinePlus />}
-        </span>
       </div>
       <div className="items">
         <Formik
-          initialValues={initialValues}
-          onSubmit={onSubmit}
+          initialValues={
+            update ? updateDegree_initialValues : addDegree_initialValues
+          }
+          onSubmit={update ? submitUpdatingDegree : submitNewDegree}
           validationSchema={AddItemForm}
+          enableReinitialize={true}
         >
           {({ isSubmitting }) => (
             <Form>
@@ -81,7 +103,7 @@ const AddItems = ({ degreesLength }) => {
                 />
               </div>
               <button type="submit" disabled={isSubmitting}>
-                Add
+                {update ? "Update" : "Add"}
               </button>
             </Form>
           )}

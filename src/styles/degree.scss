@@ -3,22 +3,13 @@
 .timeline-item {
   margin-bottom: 40px;
   width: 100%;
-  position: relative;
   .degree {
     margin: 0 auto;
     max-width: 400px;
     padding: 20px;
     border-radius: $raduis;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    // .dot{
-    //     height: 16px;
-    //     width: 16px;
-    //     background-color: $green;
-    //     position: absolute;
-    //     left: calc(50% - 8px);
-    //     border-radius: 50%;
-    //     top:10px;
-    // }
+
     .pulse {
       height: 14px;
       width: 14px;
@@ -51,6 +42,24 @@
     }
     .desc {
       color: $textColor;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 0 5px;
+      margin-top: 10px;
+      .delete , .update {
+        font-size: 20px;
+        color: $textColor;
+        transition: 0.2s ;
+        cursor: pointer;
+        &:hover {
+          color: $darkGray;
+          font-size: 24px;
+        }
+
+      }
     }
   }
   &:nth-child(odd) {

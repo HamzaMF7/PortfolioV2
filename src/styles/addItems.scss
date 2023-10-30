@@ -25,9 +25,12 @@
       align-items: center;
       gap: 0 5px;
       color: $textColor;
+      width: 100%;
     }
     .arrow-icon {
       font-size: 20px;
+      flex: 1;
+      text-align: end;
     }
   }
   .items {
@@ -70,6 +73,7 @@
         border: none;
         background: $titleColor;
         color: white;
+        cursor: pointer;
         &:disabled {
           opacity: 0.35;
         }
