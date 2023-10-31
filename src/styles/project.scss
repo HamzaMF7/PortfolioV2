@@ -1,13 +1,19 @@
-@import "../styles/variables.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 
 .project {
     display: flex;
     min-height: 380px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     margin-bottom: 48px;
+    flex-wrap: wrap;
     .project-image {
-        flex: 1;
-        padding: 48px;
+        width: 100%;
+        padding: 28px;
+        @include lg {
+            flex: 1;
+            padding: 48px;
+        }
         background-color: $bgColor;
         img{
             width: 100%;
@@ -16,8 +22,12 @@
         }
     }
     .project-info{
-         flex: 1;
-         padding: 48px;
+        width: 100%;
+        padding: 28px;
+        @include lg {
+            flex: 1;
+            padding: 48px;
+        }
          h2 {
             margin-bottom: 24px;
             color: $titleColor;

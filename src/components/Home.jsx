@@ -9,6 +9,7 @@ import {
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { VscCircleFilled } from "react-icons/vsc";
 import { FiDownloadCloud } from "react-icons/fi";
+import { useTypewriter } from "react-simple-typewriter";
 import hamza from "../assets/myPhoto.jpg";
 import CV from "../assets/img/CV_hamza_maerof.pdf";
 import Heading from "./Heading";
@@ -18,16 +19,21 @@ import "../../node_modules/aos/dist/aos.css";
 AOS.init();
 
 const Home = () => {
+  const [text] = useTypewriter({
+    words : ["I'm Hamza maerof ✋"],
+    loop : 1,
+  })
   return (
-    <div className="home">
+    <div className="home"> 
       <header>
         <Heading title="Home" />
+        
       </header>
 
       <section className="section">
         <div className="about">
           <div className="info">
-            <h1>Hi, I'm Hamza maerof</h1>
+            <h1>Hi, {text} </h1>
             <p>
               As a full stack developer, I am a versatile and skilled
               professional with a broad range of technical expertise. I possess

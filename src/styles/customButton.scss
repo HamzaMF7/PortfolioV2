@@ -1,15 +1,27 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .button {
   display: flex;
   flex-direction: column-reverse;
   overflow: hidden;
-  height: 60px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
+  height: 50px;
+  line-height: 50px;
   border-radius: $raduis;
   transition: all 0.3s ease-out;
   cursor: pointer;
-  
+  @include lg {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    &:hover {
+      height: 155px;
+    }
+    &:hover {
+      .text {
+        display: inline;
+      }
+    }
+  }
+
   .icon {
     display: flex;
     justify-content: center;
@@ -19,28 +31,28 @@
     width: 60px;
     text-align: center;
     .home-icon {
+      display: none;
       font-size: 25px;
       line-height: 60px;
       color: $green;
+      @include lg {
+        display: block;
+      }
     }
   }
   .text {
-    font-size: 18px;
-    color: $textColor ;
+    font-size: 16px;
+    color: $textColor;
     font-weight: 500;
-    line-height: 60px;
-    flex: 1;
-    writing-mode:vertical-lr;
-    transform: rotate(180deg); /* Optionally, you can use this for browser compatibility */
-    white-space: nowrap;
-    display: none;
-  }
-  &:hover {
-    height: 155px;
-  }
-  &:hover {
-    .text {
-      display: inline;
+    line-height: 50px;
+    @include lg {
+      line-height: 60px;
+      flex: 1;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      white-space: nowrap;
+      display: none;
+      font-size: 18px;
     }
   }
 }

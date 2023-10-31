@@ -1,19 +1,25 @@
-@import "../styles/variables.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 
-
-.box{
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 170px;
-    &::before{
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        background-color: $green;
-        left: calc(50% - 1px);
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 170px;
+  @include sm {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: $green;
     }
+  }
+  @include md {
+    &::before {
+      left: calc(50% - 1px);
+    }
+  }
 }

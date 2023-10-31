@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .add {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -9,7 +10,7 @@
   border-radius: $raduis;
   margin-bottom: 20px;
   overflow: hidden;
-  max-height: 52px; /* Adjust this value to your desired collapsed height */
+  max-height: 52px;
   transition: max-height 0.3s ease;
   .add-header {
     display: flex;
@@ -19,7 +20,7 @@
     user-select: none;
     height: 35px;
     margin-bottom: 15px;
-  
+
     .title {
       display: flex;
       align-items: center;
@@ -50,7 +51,10 @@
       }
       .education,
       .title {
-        flex: 1;
+        width: 100%;
+        @include sm {
+          flex: 1;
+        }
         input {
           width: 100%;
         }
@@ -83,5 +87,5 @@
 }
 
 .expanded {
-  max-height: 1000px; /* Adjust this value to your desired expanded height */
+  max-height: 1000px;
 }

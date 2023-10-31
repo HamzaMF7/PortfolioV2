@@ -1,15 +1,31 @@
-
+@import './variables.scss';
+@import './mixins.scss';
 
 
 .nav-links {
-    width: fit-content;
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-radius: $raduis $raduis 0 0;
+    background-color: $secondBgColor;
+    z-index: 10;
+    @include lg { 
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: fit-content;
+      width: fit-content;
+      background-color: transparent;
+    }
   .links {
     display: flex;
-    flex-direction: column;
-    gap: 20px 0;
+    gap: 0 20px;
+    justify-content: center;
+    @include lg {
+      flex-direction: column;
+      gap: 20px 0;
+    }
   }
 }

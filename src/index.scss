@@ -39,19 +39,19 @@ ul {
 }
 .routes {
   position: relative;
-  margin-left: 150px;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 38px;
   line-height: 40px;
+  font-weight: $semiBold;
   @include sm {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -2px;
   }
   @include md {
-    font-size: 60px;
+    font-size: 58px;
     line-height: 72px;
     letter-spacing: -2px;
   }
@@ -65,7 +65,7 @@ h3 {
   }
 }
 h2 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 18px;
   letter-spacing: 0px;
 
