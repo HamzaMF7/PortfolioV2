@@ -6,13 +6,11 @@ import Home from "../components/Home";
 
 const RoutesComponent = () => {
   return (
-    <div className="routes">
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route index path="/" element={<Home />} />
+      <Route path="/resume" element={<Resume />} />
+      <Route path="/projects" element={<Projects />} />
+    </Routes>
   );
 };
 
