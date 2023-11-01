@@ -43,13 +43,10 @@ const projectSlice = createSlice({
     },
     removedTag: (state, action) => {
       const removedTag = action.payload;
-      // console.log(removedTag);
-      if ( removedTag == state.tags[0]) console.log(true);
       const filtredTags = state.tags.filter(
-        (tag) => tag !== removedTag
+        (tag) => tag.trim().toLowerCase() !== removedTag.trim().toLowerCase()
       );
       state.tags = filtredTags;
-
     },
   },
   extraReducers: (builder) => {

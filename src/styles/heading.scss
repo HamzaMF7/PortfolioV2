@@ -1,8 +1,6 @@
-@import "./variables.scss";
-@import "./mixins.scss";
 
 .heading {
-  padding: 50px 32px;
+  padding: 40px 32px;
   text-align: center;
   color: $textColor;
   @include md {
@@ -14,6 +12,9 @@
     background-color: $secondBgColor;
     padding: 4px 20px;
     border-radius: 12px;
-    margin: 0 auto 16px;
+    margin: 0 auto;
+  }
+  .description {
+    margin-top: 16px;
   }
 }

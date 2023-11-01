@@ -13,16 +13,9 @@ const Projects = () => {
     (state) => state.project
   );
 
-  // console.log(["HTML", "CSS", "JS"].filter((tag)=> tag !== "JS"));
-
   useEffect(() => {
     dispatch(getProjects());
   }, []);
-
-  console.log("tags :", tags);
-  // useEffect(() => {
-  //   // console.log("filtred projects", filtredProjects);
-  // }, [tags]);
 
   return (
     <div className="projects ">
