@@ -32,8 +32,8 @@
       "name": "C.P-COMPANY",
       "description": "Welcome to the homepage of a contemporary fashion clothing store, where you'll find the latest in modern apparel and trendy fashion",
       "language": [
-        "HTML ",
-        " CSS "
+        "HTML",
+        "CSS"
       ],
       "lien": "https://hamzamf7.github.io/C.P-COMPANY/"
     },
@@ -44,8 +44,8 @@
       "description": "Explore my skills in HTML and CSS through a captivating single-page website project. Witness creativity in design, seamless navigation, and responsive layouts that showcase my expertise in front-end web development",
       "language": [
         "HTML",
-        " CSS",
-        " JS"
+        "CSS",
+        "JS"
       ],
       "lien": "https://hamzamf7.github.io/SinglePage_WebSite_example/"
     },
@@ -56,7 +56,7 @@
       "description": "Stay organized and on top of your tasks with our user-friendly to-do list project. Effortlessly manage your daily agenda, prioritize tasks, and boost productivity with our intuitive task management tool",
       "language": [
         "HTML",
-        "CSS ",
+        "CSS",
         "JQUERY"
       ],
       "lien": "https://hamzamf7.github.io/ToDoList_JQ/"
@@ -85,7 +85,13 @@
       "id": 4,
       "education": "3W Academy",
       "title": "Full stack JS/PHP Developer",
-      "description": "web development integrator"
+      "description": "web development integrator\n"
+    },
+    {
+      "id": 5,
+      "education": "ensa",
+      "title": "master degree",
+      "description": "lorem ipsum"
     }
   ]
 }

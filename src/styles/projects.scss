@@ -1,5 +1,11 @@
 @import "./variables.scss";
 
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 48px;
+}
 
 .projects-box {
     margin-bottom: 104px;

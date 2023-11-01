@@ -16,6 +16,8 @@ export const getProjects = createAsyncThunk(
 
 const initialState = {
   projects: [],
+  tags: [],
+  filtredProjects: [],
   isError: false,
   isLoading: false,
   isSuccess: false,
@@ -25,6 +27,31 @@ export const resetState = createAction("Reset_all");
 const projectSlice = createSlice({
   name: "projects",
   initialState,
+  reducers: {
+    filterByTag: (state, action) => {
+      const filtered_projects = state.projects.filter((project) => {
+        return state.tags.every((tag) => project.language.includes(tag));
+      });
+      state.filtredProjects = filtered_projects;
+    },
+
+    selectedTag: (state, action) => {
+      const newTag = action.payload;
+      if (!state.tags.includes(newTag)) {
+        state.tags = [...state.tags, newTag];
+      }
+    },
+    removedTag: (state, action) => {
+      const removedTag = action.payload;
+      // console.log(removedTag);
+      if ( removedTag == state.tags[0]) console.log(true);
+      const filtredTags = state.tags.filter(
+        (tag) => tag !== removedTag
+      );
+      state.tags = filtredTags;
+
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getProjects.pending, (state) => {
@@ -35,6 +62,7 @@ const projectSlice = createSlice({
         state.isError = false;
         state.isSuccess = true;
         state.projects = action.payload;
+        state.filtredProjects = action.payload;
       })
       .addCase(getProjects.rejected, (state, action) => {
         state.isLoading = false;
@@ -44,4 +72,6 @@ const projectSlice = createSlice({
       .addCase(resetState, () => initialState);
   },
 });
+
+export const { filterByTag, selectedTag, removedTag } = projectSlice.actions;
 export default projectSlice.reducer;

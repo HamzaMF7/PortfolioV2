@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/navLinks.scss";
 import { Link } from "react-router-dom";
 import CustomButton from "./CustomButton";
 import { AiFillHome, AiFillFile, AiFillAppstore } from "react-icons/ai";

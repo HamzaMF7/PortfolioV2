@@ -1,21 +1,28 @@
 import React, { useEffect } from "react";
 import Heading from "./Heading";
 import Project from "./Project";
-import "../styles/projects.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjects } from "../state/projectSlice";
 import LoadingOverlay from "./LoadingOverlay";
 import NotFound from "./NotFound";
+import Tag from "./Tag";
 
 const Projects = () => {
   const dispatch = useDispatch();
-  const { projects, isLoading, isSuccess } = useSelector(
+  const { filtredProjects, tags, isLoading, isSuccess } = useSelector(
     (state) => state.project
   );
+
+  // console.log(["HTML", "CSS", "JS"].filter((tag)=> tag !== "JS"));
 
   useEffect(() => {
     dispatch(getProjects());
   }, []);
+
+  console.log("tags :", tags);
+  // useEffect(() => {
+  //   // console.log("filtred projects", filtredProjects);
+  // }, [tags]);
 
   return (
     <div className="projects ">
@@ -25,11 +32,18 @@ const Projects = () => {
         text="Some of the noteworthy projects I have built"
       />
       {isSuccess ? (
-        <div className="projects-box">
-          {projects?.map((project) => (
-            <Project {...project} key={project.id} />
-          ))}
-        </div>
+        <>
+          <div className="tags">
+            {tags?.map((title) => (
+              <Tag title={title} filter={true} />
+            ))}
+          </div>
+          <div className="projects-box">
+            {filtredProjects?.map((project) => (
+              <Project {...project} key={project.id} />
+            ))}
+          </div>
+        </>
       ) : (
         <NotFound />
       )}

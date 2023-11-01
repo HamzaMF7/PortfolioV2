@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/project.scss";
 import { CiShare1 } from "react-icons/ci";
 import Tag from "./Tag";
 
@@ -18,7 +17,7 @@ const Project = ({ image, name, description, language, lien }) => {
         <p>{description}</p>
         <div className="tools">
           {language?.map((e, index) => (
-            <Tag title={e} key={index} />
+            <Tag title={e} key={index}  />
           ))}
         </div>
         <a className="view" href={lien} target="_blank" rel="noreferrer">

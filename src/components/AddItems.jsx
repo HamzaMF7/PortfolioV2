@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { HiOutlineViewGridAdd } from "react-icons/hi";
-import "../styles/addItems.scss";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { AddItemForm } from "../schemas/AddItemForm";
 import { useDispatch, useSelector } from "react-redux";

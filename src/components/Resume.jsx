@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Heading from "./Heading";
 import Degree from "./Degree";
-import "../styles/resume.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getDegrees } from "../state/resumeSlice";
 import LoadingOverlay from "./LoadingOverlay";

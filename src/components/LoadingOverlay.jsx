@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/loadingOverlay.scss";
 import { DotLoader } from "react-spinners";
 
 const LoadingOverlay = () => {

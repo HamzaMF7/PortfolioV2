@@ -1,8 +1,19 @@
-@import "../styles/variables.scss" ;
+@import "../styles/variables.scss";
 
 .tag {
   width: fit-content;
-  background-color: $secondBgColor;
-  padding: 4px 20px;
+  background-color: #e5e7eb;
+  padding: 4px 14px;
   border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 5px;
+  & > span {
+    font-size: 16px;
+  }
+  .close-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
 }

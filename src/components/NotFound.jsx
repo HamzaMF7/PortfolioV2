@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/notFound.scss";
 import { ImFileEmpty } from "react-icons/im";
 
 const NotFound = () => {

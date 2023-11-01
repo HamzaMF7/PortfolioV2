@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/customButton.scss";
 
 const CustomButton = ({ icon: IconComponent, text }) => {
   return (
