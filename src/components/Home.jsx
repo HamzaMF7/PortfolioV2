@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  SlSocialFacebook,
   SlSocialGithub,
   SlSocialLinkedin,
   SlLocationPin,
@@ -19,16 +18,12 @@ AOS.init();
 
 const Home = () => {
   const [text] = useTypewriter({
-    words : ["I'm Hamza maerof ✋"],
-    loop : 1,
-  })
+    words: ["I'm Hamza maerof ✋"],
+    loop: 1,
+  });
   return (
-    <div className="home"> 
-      <header>
-        <Heading title="Home" />
-        
-      </header>
-
+    <div className="home">
+      <Heading title="Home" />
       <section className="section">
         <div className="about">
           <div className="info">
@@ -53,12 +48,11 @@ const Home = () => {
           </div>
           <ul className="social-media">
             <li>
-              <a href="#">
-                <SlSocialFacebook />
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/HamzaMF7" target="_blank">
+              <a
+                href="https://github.com/HamzaMF7"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <SlSocialGithub />
               </a>
             </li>
@@ -66,12 +60,13 @@ const Home = () => {
               <a
                 href="https://www.linkedin.com/in/hamza-maerof-379239236/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <SlSocialLinkedin />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="mailto:hamzamaerof07@gmail.com">
                 <MdOutlineAlternateEmail />
               </a>
             </li>

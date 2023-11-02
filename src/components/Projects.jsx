@@ -15,7 +15,7 @@ const Projects = () => {
 
   useEffect(() => {
     dispatch(getProjects());
-  }, []);
+  },[dispatch]);
 
   return (
     <div className="projects ">
@@ -27,8 +27,8 @@ const Projects = () => {
       {isSuccess ? (
         <>
           <div className="tags">
-            {tags?.map((title) => (
-              <Tag title={title} filter={true} />
+            {tags?.map((title, index) => (
+              <Tag title={title} filter={true} key={index} />
             ))}
           </div>
           <div className="projects-box">

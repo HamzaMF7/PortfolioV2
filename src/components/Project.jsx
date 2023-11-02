@@ -1,5 +1,5 @@
 import React from "react";
-import { CiShare1 } from "react-icons/ci";
+import { BsFillEyeFill } from "react-icons/bs";
 import Tag from "./Tag";
 
 import AOS from "aos";
@@ -17,12 +17,14 @@ const Project = ({ image, name, description, language, lien }) => {
         <p>{description}</p>
         <div className="tools">
           {language?.map((e, index) => (
-            <Tag title={e} key={index}  />
+            <Tag title={e} key={index} />
           ))}
         </div>
-        <a className="view" href={lien} target="_blank" rel="noreferrer">
-          <CiShare1 />
-        </a>
+        <div className="view">
+          <a href={lien} target="_blank" rel="noreferrer">
+            <BsFillEyeFill />
+          </a>
+        </div>
       </div>
     </div>
   );

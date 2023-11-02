@@ -43,5 +43,18 @@
             flex-wrap: wrap;
         
         }
+        .view {
+            text-align: end;
+            & > a {
+                color: $textColor;
+                font-size: 24px;
+                transition: .2s;
+                &:hover {
+                    font-size: 26px;
+                    color: $green;
+                }
+            }
+
+        }
     }
 }
