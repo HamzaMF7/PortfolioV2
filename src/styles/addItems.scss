@@ -1,5 +1,5 @@
 @import "./variables.scss";
-@import "./mixins.scss";
+@import "./mixins.scss"; 
 
 .add {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -25,7 +25,9 @@
       display: flex;
       align-items: center;
       gap: 0 5px;
-      color: $textColor;
+      @include theme() {
+        color: theme-get('textColor')
+      }
       width: 100%;
     }
     .arrow-icon {
@@ -75,7 +77,9 @@
         padding: 10px 25px;
         border-radius: 12px;
         border: none;
-        background: $titleColor;
+        @include theme(){
+          background: theme-get('titleColor');
+        }
         color: white;
         cursor: pointer;
         &:disabled {

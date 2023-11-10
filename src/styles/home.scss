@@ -1,26 +1,34 @@
 .home {
-  height: 100vh;
+  padding-bottom: 170px;
   .section {
-    height: calc(100vh - 371px);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px 0;
+    flex-direction: column;
+    @include xl {
+      height: calc(100vh - 371px);
+      flex-direction: unset;
+      flex-wrap: wrap;
+    }
+    gap: 20px;
     .about {
       max-width: 650px;
       min-height: 460px;
       .info {
         h1 {
           margin-bottom: 20px;
-          color: $darkGray;
+          @include theme() {
+            color: theme-get("titleColor");
+          }
           min-height: 80px;
           @include sm {
             margin-bottom: 0;
           }
         }
         p {
-          color: $textColor;
+          @include theme() {
+            color: theme-get("textColor");
+          }
         }
       }
       .extra-info {
@@ -33,9 +41,13 @@
           justify-content: center;
           align-items: center;
           gap: 0 5px;
-          color: $textColor;
+          @include theme() {
+            color: theme-get("textColor");
+          }
           .location-icon {
-            color: $textColor;
+            @include theme() {
+              color: theme-get("textColor");
+            }
             font-size: 24px;
           }
         }
@@ -53,43 +65,70 @@
           a {
             :first-child {
               font-size: 24px;
-              color: $textColor;
+              @include theme() {
+                color: theme-get("textColor");
+              }
             }
           }
         }
       }
     }
     .image {
-      display: none;
+      order: -1;
+      margin-bottom: 40px;
       @include xl {
-        display: block;
+        order: 0;
         flex: 1;
         position: relative;
         min-height: 460px;
         max-width: 400px;
       }
       .my-img {
-        width: 310px;
-        height: 285px;
         position: relative;
-        left: 30px;
-        background-color: $white;
-        border-radius: $raduis;
-        img {
-          width: 300px;
-          border-radius: $raduis;
+        width: 240px;
+        height: 222px;
+        @include xl {
+          width: 310px;
+          height: 286px;
         }
-      }
-      .bg-img {
-        width: 300px;
-        height: 300px;
-        background-color: $secondBgColor;
         border-radius: $raduis;
-        position: absolute;
-        right: 0;
-        top: 50px;
-        bottom: -80px;
-        z-index: -10;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: calc(100% + 50px);
+          height: 100%;
+          left: -25px;
+          top: 23px;
+          @include xl {
+            width: 100%;
+            left: 50px;
+            top: 50px;
+          }
+          border-radius: 12px;
+          @include theme() {
+            background: theme-get("secondBgColor");
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          @include theme() {
+            background-color: theme-get("bodyBgColor");
+          }
+          width: calc(100% + 20px);
+          height: calc(100% + 20px);
+          top: -12px;
+          left: -10px;
+          z-index: 1;
+          border-radius: 12px;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          border-radius: $raduis;
+          z-index: 2;
+        }
       }
     }
     .btn {
@@ -100,8 +139,10 @@
         border: none;
         padding: 15px 30px;
         border-radius: 12px;
-        background: $darkGray;
-        color: white;
+        @include theme() {
+          color: theme-get("bgColor");
+          background-color: theme-get("titleColor");
+        }
         font-size: 18px;
         display: flex;
         align-items: center;

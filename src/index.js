@@ -9,13 +9,13 @@ import { store } from "./state/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HashRouter>
-    <Provider store={store}>
-      <React.StrictMode>
+  <React.StrictMode>
+    <HashRouter>
+      <Provider store={store}>
         <App />
-      </React.StrictMode>
-    </Provider>
-  </HashRouter>
+      </Provider>
+    </HashRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

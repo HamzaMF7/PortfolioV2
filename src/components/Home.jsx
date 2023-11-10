@@ -8,7 +8,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import { VscCircleFilled } from "react-icons/vsc";
 import { FiDownloadCloud } from "react-icons/fi";
 import { useTypewriter } from "react-simple-typewriter";
-import hamza from "../assets/myPhoto.jpg";
+import hamza from "../assets/myPhoto.webp";
 import CV from "../assets/img/CV_hamza_maerof.pdf";
 import Heading from "./Heading";
 
@@ -18,11 +18,11 @@ AOS.init();
 
 const Home = () => {
   const [text] = useTypewriter({
-    words: ["I'm Hamza maerof ✋"],
+    words: ["I'm Hamza maerof👋"],
     loop: 1,
   });
   return (
-    <div className="home">
+    <div className="home container">
       <Heading title="Home" />
       <section className="section">
         <div className="about">
@@ -76,7 +76,6 @@ const Home = () => {
           <div className="my-img">
             <img src={hamza} alt="hamza" />
           </div>
-          <div className="bg-img"></div>
         </div>
         <div className="btn">
           <a href={CV} download="CV_hamza_maerof.pdf">

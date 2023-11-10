@@ -13,13 +13,15 @@ const Resume = () => {
     (state) => state.resume
   );
 
+
+
   useEffect(() => {
     dispatch(getDegrees());
   }, []);
 
   return (
-    <div className="Resume">
-      {isLoading && <LoadingOverlay />}
+    <div className="resume container">
+      {/* {isLoading && <LoadingOverlay />} */}
       <Heading
         title="Resume"
         text="Here is a quick summary of my education and certifications"

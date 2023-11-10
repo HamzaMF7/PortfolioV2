@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { URL } from "../api/Url";
+import { useDispatch } from "react-redux";
 
 export const getProjects = createAsyncThunk(
   "projects/get-projects",
@@ -70,5 +71,6 @@ const projectSlice = createSlice({
   },
 });
 
-export const { filterByTag, selectedTag, removedTag } = projectSlice.actions;
+export const { filterByTag, selectedTag, removedTag, updateLoading } =
+  projectSlice.actions;
 export default projectSlice.reducer;

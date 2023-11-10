@@ -1,16 +1,17 @@
-
-
 .not-found {
-    text-align: center;
-    padding-top: 100px;
-    .empty{
-      font-size: 60px;
-      color : $textColor ;
-      margin-bottom: 20px;
+  text-align: center;
+  padding-top: 100px;
+  .empty {
+    font-size: 60px;
+    @include theme() {
+      color: theme-get('textColor')
     }
-    p{
-      color: $textColor;
-      font-size: 20px;
-    }
+    margin-bottom: 20px;
   }
-  
+  p {
+    @include theme(){
+      color: theme-get('textColor');
+    }
+    font-size: 20px;
+  }
+}

@@ -1,13 +1,10 @@
-
-.tags {
+.projects {
+  padding-bottom: 104px;
+  .tags {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
-    
-}
-
-.projects-box {
-    margin-bottom: 104px;
+  }
 }

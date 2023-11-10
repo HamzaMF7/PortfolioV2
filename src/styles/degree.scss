@@ -1,7 +1,6 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-
 .timeline-item {
   margin-bottom: 40px;
   width: 100%;
@@ -53,10 +52,14 @@
       margin: 10px 0;
       font-weight: $semiBold;
       text-transform: capitalize;
-      color: $darkGray;
+      @include theme() {
+        color: theme-get("titleColor");
+      }
     }
     .desc {
-      color: $textColor;
+      @include theme() {
+        color: theme-get("textColor");
+      }
     }
     .icons {
       display: flex;
@@ -67,11 +70,15 @@
       .delete,
       .update {
         font-size: 20px;
-        color: $textColor;
+        @include theme() {
+          color: theme-get("textColor");
+        }
         transition: 0.2s;
         cursor: pointer;
         &:hover {
-          color: $darkGray;
+          @include theme() {
+            color: theme-get("titleColor");
+          }
           font-size: 24px;
         }
       }

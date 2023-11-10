@@ -1,60 +1,65 @@
-
-
 .project {
-    display: flex;
-    min-height: 380px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    margin-bottom: 48px;
-    flex-wrap: wrap;
-    .project-image {
-        width: 100%;
-        padding: 28px;
-        @include lg {
-            flex: 1;
-            padding: 48px;
-        }
-        background-color: $bgColor;
-        img{
-            width: 100%;
-            height: 100%;
-            border-radius: $raduis
-        }
+  display: flex;
+  min-height: 380px;
+  box-shadow: #0000001a 0px 4px 6px -1px,
+    #0000000f 0px 2px 4px -1px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  .project-image {
+    width: 100%;
+    padding: 28px;
+    @include lg {
+      flex: 1;
+      padding: 48px;
     }
-    .project-info{
-        width: 100%;
-        padding: 28px;
-        @include lg {
-            flex: 1;
-            padding: 48px;
-        }
-         h2 {
-            margin-bottom: 24px;
-            color: $titleColor;
-            font-weight: $semiBold;
-         }
-         p {
-            color: $textColor;
-            margin-bottom: 24px;
-        }
-        .tools {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-        
-        }
-        .view {
-            text-align: end;
-            & > a {
-                color: $textColor;
-                font-size: 24px;
-                transition: .2s;
-                &:hover {
-                    font-size: 26px;
-                    color: $green;
-                }
-            }
-
-        }
+    @include theme() {
+      background-color: theme-get("bgColor");
     }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $raduis;
+    }
+  }
+  .project-info {
+    width: 100%;
+    padding: 28px;
+    @include lg {
+      flex: 1;
+      padding: 48px;
+    }
+    h2 {
+      margin-bottom: 24px;
+      @include theme() {
+        color: theme-get("titleColor");
+      }
+      font-weight: $semiBold;
+    }
+    p {
+      @include theme() {
+        color: theme-get("textColor");
+      }
+      margin-bottom: 24px;
+    }
+    .tools {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .view {
+      text-align: end;
+      & > a {
+        @include theme() {
+          color: theme-get("textColor");
+        }
+        font-size: 24px;
+        transition: 0.2s;
+        &:hover {
+          font-size: 26px;
+          color: $green;
+        }
+      }
+    }
+  }
 }

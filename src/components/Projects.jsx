@@ -7,6 +7,7 @@ import LoadingOverlay from "./LoadingOverlay";
 import NotFound from "./NotFound";
 import Tag from "./Tag";
 
+
 const Projects = () => {
   const dispatch = useDispatch();
   const { filtredProjects, tags, isLoading, isSuccess } = useSelector(
@@ -15,11 +16,11 @@ const Projects = () => {
 
   useEffect(() => {
     dispatch(getProjects());
-  },[dispatch]);
+  }, []);
 
   return (
-    <div className="projects ">
-      {isLoading && <LoadingOverlay />}
+    <div className="projects container">
+      {/* {isLoading && <LoadingOverlay />}  */}
       <Heading
         title="Projects"
         text="Some of the noteworthy projects I have built"

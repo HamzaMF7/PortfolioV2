@@ -1,16 +1,54 @@
-$green : #14A800 ;
-$white : #FFFFFF ;
-$titleColor : #111827 ;
-$bgColor : #f9fafb ;
-$secondBgColor: #e5e7eb ;
-$textColor : #4b5563;
-$darkGray : #030712;
+@use 'sass:list';
 
-$raduis :12px ;
-$bold : 700;
-$semiBold : 600;
-$normal : 400;
+$dark-gray-default: #030712;
+$dark-gray-50: #111827;
+$dark-gray-100: #1f2937;
+$dark-gray-200: #374151;
+$dark-gray-300: #4b5563;
+$dark-gray-400: #6b7280;
+$dark-gray-500: #9ca3af;
+$dark-gray-600: #d1d5db;
+$dark-gray-700: #e5e7eb;
+$dark-gray-800: #f3f4f6;
+$dark-gray-900: #f9fafb;
+$dark-gray-950: #ffffff;
 
+$light-gray-default: #ffffff;
+$light-gray-50: #f9fafb;
+$light-gray-100: #f3f4f6;
+$light-gray-200: #e5e7eb;
+$light-gray-300: #d1d5db;
+$light-gray-400: #9ca3af;
+$light-gray-500: #6b7280;
+$light-gray-600: #4b5563;
+$light-gray-700: #374151;
+$light-gray-800: #1f2937;
+$light-gray-900: #111827;
+$light-gray-950: #030712;
 
+$green: #14a800;
+$darkGray: #030712;
+
+$raduis: 12px;
+$bold: 700;
+$semiBold: 600;
+$normal: 400;
+
+$themes: (
+  darkTheme: (
+    'bodyBgColor': $dark-gray-default,
+    'bgColor': $dark-gray-50,
+    'secondBgColor': $dark-gray-200,
+    'titleColor': $dark-gray-900,
+    'textColor': $dark-gray-600,
+  ),
+  lightTheme: (
+    'bodyBgColor': $light-gray-default,
+    'bgColor': $light-gray-50,
+    'secondBgColor': $light-gray-200,
+    'titleColor': $light-gray-900,
+    'textColor': $light-gray-600,
+  ),
+);
 
 
