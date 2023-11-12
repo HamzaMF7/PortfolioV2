@@ -41,14 +41,20 @@ $themes: (
     'secondBgColor': $dark-gray-200,
     'titleColor': $dark-gray-900,
     'textColor': $dark-gray-600,
-  ),
-  lightTheme: (
-    'bodyBgColor': $light-gray-default,
-    'bgColor': $light-gray-50,
-    'secondBgColor': $light-gray-200,
-    'titleColor': $light-gray-900,
-    'textColor': $light-gray-600,
-  ),
+    'darkGray950': $dark-gray-950,
+    'borderColor': $dark-gray-300,
+    'thirdBgColor' :$dark-gray-100,
+    ),
+    lightTheme: (
+      'bodyBgColor': $light-gray-default,
+      'bgColor': $light-gray-50,
+      'secondBgColor': $light-gray-200,
+      'titleColor': $light-gray-900,
+      'textColor': $light-gray-600,
+      'darkGray950': $light-gray-950,
+      'borderColor': $light-gray-300,
+      'thirdBgColor' :$light-gray-100,
+      ),
 );
 
 

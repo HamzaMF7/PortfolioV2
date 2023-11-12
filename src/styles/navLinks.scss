@@ -21,9 +21,19 @@
     display: flex;
     gap: 0 20px;
     justify-content: center;
+    align-items: center;
     @include lg {
       flex-direction: column;
       gap: 20px 0;
+    }
+    .darkMode-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      @include theme(){
+        color:  theme-get('darkGray950');
+      }
     }
   }
 }

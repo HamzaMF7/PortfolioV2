@@ -5,6 +5,10 @@
     #0000000f 0px 2px 4px -1px;
   margin-bottom: 48px;
   flex-wrap: wrap;
+  border-radius: $raduis;
+  @include theme(){
+    background-color: theme-get('thirdBgColor');
+  }
   .project-image {
     width: 100%;
     padding: 28px;
