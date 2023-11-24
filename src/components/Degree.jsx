@@ -5,7 +5,6 @@ import { PiNotePencilDuotone } from "react-icons/pi";
 import AOS from "aos";
 import { useParams } from "react-router-dom";
 import { deleteDegree, getDegrees, showDegree } from "../state/resumeSlice";
-import "../styles/degree.scss";
 
 AOS.init();
 

@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
-import Heading from "./Heading";
-import Project from "./Project";
+import Heading from "../components/Heading";
+import Project from "../components/Project";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjects } from "../state/projectSlice";
-import LoadingOverlay from "./LoadingOverlay";
-import NotFound from "./NotFound";
-import Tag from "./Tag";
+import NotFound from "../components/NotFound";
+import Tag from "../components/Tag";
+import ScrollToTop from "../customHook/ScrollToTop";
 
 
 const Projects = () => {
   const dispatch = useDispatch();
-  const { filtredProjects, tags, isLoading, isSuccess } = useSelector(
+  const { filtredProjects, tags, isSuccess } = useSelector(
     (state) => state.project
   );
 
@@ -18,9 +18,10 @@ const Projects = () => {
     dispatch(getProjects());
   }, []);
 
+  ScrollToTop();
+
   return (
     <div className="projects container">
-      {/* {isLoading && <LoadingOverlay />}  */}
       <Heading
         title="Projects"
         text="Some of the noteworthy projects I have built"

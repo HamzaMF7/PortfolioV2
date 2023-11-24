@@ -10,7 +10,7 @@ import { FiDownloadCloud } from "react-icons/fi";
 import { useTypewriter } from "react-simple-typewriter";
 import hamza from "../assets/myPhoto.webp";
 import CV from "../assets/img/CV_hamza_maerof.pdf";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
 
 import AOS from "aos";
 import "../../node_modules/aos/dist/aos.css";

@@ -1,14 +1,18 @@
-@import "./addItems.scss";
-@import "./customButton.scss";
-@import "./degree.scss";
-@import "./heading.scss";
-@import "./home.scss";
-@import "./loadingOverlay.scss";
-@import "./mixins.scss";
-@import "./navLinks.scss";
-@import "./notFound.scss";
-@import "./project.scss";
-@import "./projects.scss";
-@import "./resume.scss";
-@import "./tag.scss";
+// componenets
+@import "./components/addItems.scss";
+@import "./components/customButton.scss";
+@import "./components/degree.scss";
+@import "./components/heading.scss";
+@import "./components/loadingOverlay.scss";
+@import "./components/navLinks.scss";
+@import "./components/notFound.scss";
+@import "./components/project.scss";
+@import "./components/tag.scss";
+
+// pages
+@import "./pages/resume.scss";
+@import "./pages/projects.scss";
+@import "./pages/home.scss";
+
 @import "./variables.scss";
+@import "./mixins.scss";

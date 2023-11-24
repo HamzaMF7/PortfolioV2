@@ -6,13 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./state/store";
+import ThemeWrapper from "./components/ThemeWrapper";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HashRouter>
       <Provider store={store}>
-        <App />
+        <ThemeWrapper>
+          <App />
+        </ThemeWrapper>
       </Provider>
     </HashRouter>
   </React.StrictMode>

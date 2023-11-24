@@ -1,27 +1,24 @@
 import React, { useEffect } from "react";
-import Heading from "./Heading";
-import Degree from "./Degree";
+import Heading from "../components/Heading";
+import Degree from "../components/Degree";
 import { useDispatch, useSelector } from "react-redux";
 import { getDegrees } from "../state/resumeSlice";
-import LoadingOverlay from "./LoadingOverlay";
-import NotFound from "./NotFound";
-import AddItems from "./AddItems";
+import NotFound from "../components/NotFound";
+import AddItems from "../components/AddItems";
+import ScrollToTop from "../customHook/ScrollToTop";
 
 const Resume = () => {
   const dispatch = useDispatch();
-  const { degrees, isLoading, isSuccess } = useSelector(
-    (state) => state.resume
-  );
-
-
+  const { degrees, isSuccess } = useSelector((state) => state.resume);
 
   useEffect(() => {
     dispatch(getDegrees());
   }, []);
 
+  ScrollToTop();
+
   return (
     <div className="resume container">
-      {/* {isLoading && <LoadingOverlay />} */}
       <Heading
         title="Resume"
         text="Here is a quick summary of my education and certifications"
@@ -31,8 +28,8 @@ const Resume = () => {
         <div className="box">
           {Array.from(degrees)
             ?.reverse()
-            .map((degree) => (
-              <Degree {...degree} key={degree.id} />
+            .map(({id , ...degree}) => (
+              <Degree {...degree} key={id} />
             ))}
         </div>
       ) : (
