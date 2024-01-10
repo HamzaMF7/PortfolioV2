@@ -1,23 +1,45 @@
 .heading {
-  padding: 40px 32px;
+  position: relative;
   text-align: center;
-  @include md {
-    padding: 80px 32px;
-  }
-  .title {
+  text-transform: uppercase;
+  padding: 20px 0;
+
+  .gradient-text {
+    position: relative;
+    font-size: 16vw;
+    @include sm {
+      font-size: 6.25rem;
+    }
+    opacity: 0.1;
+    margin: 20px 0;
+    font-weight: $regular;
     @include theme() {
       color: theme-get("textColor");
-      background-color: theme-get("secondBgColor");
     }
-    width: fit-content;
-    padding: 4px 20px;
-    border-radius: 12px;
-    margin: 0 auto;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      background-color: transparent;
+      @include theme() {
+        box-shadow: -1px -8px 20px 12px theme-get("bgColor");
+      }
+    }
   }
-  .description {
-    margin-top: 16px;
+  .sub-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: $regular;
     @include theme(){
-      color : theme-get('textColor')
+      color: theme-get('textColor');
     }
+    @include sm {
+      font-size: 1.5rem;
+    }
+    font-size: 5vw;
+    letter-spacing: 4px;
   }
 }

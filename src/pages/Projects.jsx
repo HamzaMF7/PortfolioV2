@@ -24,7 +24,7 @@ const Projects = () => {
     <div className="projects container">
       <Heading
         title="Projects"
-        text="Some of the noteworthy projects I have built"
+        text="Projects"
       />
       {isSuccess ? (
         <>

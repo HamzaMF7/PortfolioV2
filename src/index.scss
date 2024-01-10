@@ -14,7 +14,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  // line-height: 24px;
 }
 
 body::-webkit-scrollbar {
@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .app {
-  min-height: 100vh;
+  min-height: 100vh ;
   @include theme() {
     background: theme-get("bodyBgColor");
   }

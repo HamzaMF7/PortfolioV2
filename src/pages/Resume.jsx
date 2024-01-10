@@ -21,7 +21,7 @@ const Resume = () => {
     <div className="resume container">
       <Heading
         title="Resume"
-        text="Here is a quick summary of my education and certifications"
+        text="Resume"
       />
       <AddItems degreesLength={degrees.length} />
       {isSuccess ? (
