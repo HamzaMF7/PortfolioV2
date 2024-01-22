@@ -21,8 +21,8 @@
 
     .pulse {
       @include sm {
-        height: 14px;
-        width: 14px;
+        height: 20px;
+        width: 20px;
         background-color: $green;
         position: absolute;
         left: -7px;
@@ -40,7 +40,7 @@
           animation-delay: calc(1s * var(--i));
         }
         @include md {
-          left: calc(50% - 8px);
+          left: calc(50% - 11px);
         }
       }
     }
