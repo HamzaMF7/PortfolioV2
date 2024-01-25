@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/PortfolioV2/static/css/main.7a7a50bf.css",
-    "main.js": "/PortfolioV2/static/js/main.6336c67b.js",
+    "main.js": "/PortfolioV2/static/js/main.d35463a0.js",
     "static/js/787.d9a20797.chunk.js": "/PortfolioV2/static/js/787.d9a20797.chunk.js",
-    "static/media/CV_hamza_maerof.pdf": "/PortfolioV2/static/media/CV_hamza_maerof.b12cbb01701870ec2c16.pdf",
+    "static/media/CV_hamza_maerof.pdf": "/PortfolioV2/static/media/CV_hamza_maerof.6e3b625afe443b3e6d0d.pdf",
     "static/media/img1.webp": "/PortfolioV2/static/media/img1.d6d624d887f7d5b59fef.webp",
     "static/media/img2.webp": "/PortfolioV2/static/media/img2.d5b48b06dd16aa6686be.webp",
     "static/media/img4.webp": "/PortfolioV2/static/media/img4.8fdd52ac998a76527a39.webp",
@@ -13,11 +13,11 @@
     "static/media/img3.webp": "/PortfolioV2/static/media/img3.a2ce1bef8bea85ac6c66.webp",
     "index.html": "/PortfolioV2/index.html",
     "main.7a7a50bf.css.map": "/PortfolioV2/static/css/main.7a7a50bf.css.map",
-    "main.6336c67b.js.map": "/PortfolioV2/static/js/main.6336c67b.js.map",
+    "main.d35463a0.js.map": "/PortfolioV2/static/js/main.d35463a0.js.map",
     "787.d9a20797.chunk.js.map": "/PortfolioV2/static/js/787.d9a20797.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7a7a50bf.css",
-    "static/js/main.6336c67b.js"
+    "static/js/main.d35463a0.js"
   ]
 }
