@@ -1,0 +1,33 @@
+.ant-modal-content {
+  .ant-modal-body {
+    h4 {
+      margin: 10px 0;
+    }
+    ul {
+      list-style: disc;
+      padding: 0 36px;
+    }
+    p:last-child {
+        margin-top: 10px;
+    }
+  }
+}
+.descModal {
+    .btn {
+        margin: 20px 0;
+        margin-left: auto;
+        cursor: pointer;
+        border: none;
+        padding: 8px 12px ;
+        border-radius: 12px;
+        @include theme() {
+          color: theme-get("bgColor");
+          background-color: theme-get("titleColor");
+        }
+        font-size: 14px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 0 8px;
+    }
+}

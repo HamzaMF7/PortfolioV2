@@ -1,0 +1,82 @@
+{
+  "descriptions": [
+    {
+      "id": 1,
+      "projectName": "🚗 CarGo 🚗",
+      "briefDescription": "CarGo is a front-end platform designed to streamline the rental car booking process, catering to a wide range of needs from daily errands to epic road trips. With its intuitive interface and diverse vehicle selection, CarGo makes booking a breeze.",
+      "keyFeatures": [
+        "User Registration and Authentication",
+        "Search and Filter functionality",
+        "Extensive Car Listings with detailed information",
+        "Wishlist feature for saving favorite vehicles",
+        "Seamless Booking System with integrated payment options",
+        "Efficient Booking Management for easy tracking",
+        "User Reviews and Ratings for informed decisions",
+        "Admin Dashboard for overseeing operations",
+        "Responsive Design ensures optimal viewing across devices"
+      ],
+      "technologies": [
+        "HTML5",
+        "SCSS",
+        "React.js",
+        "TypeScript",
+        "Ant Design (antd)",
+        "Formik for form management",
+        "Redux Toolkit for state management",
+        "Styled Components for flexible styling",
+        "Swiper for carousel functionality",
+        "Axios for API requests",
+        "JSON Server for local data management"
+      ],
+      "challenge": "💡 One challenge I encountered during this project was implementing different component styles for the same device size. To overcome this, I leveraged styled components to achieve dynamic styling and ensure a seamless user experience."
+    },
+    {
+      "id": 2,
+      "projectName": "🏋️‍♂️ CaliFit 🏋️‍♂️",
+      "briefDescription": "CaliFit – an e-commerce website dedicated to providing top-notch calisthenics gear. With its user-friendly design and innovative features, CaliFit revolutionizes the online shopping experience for fitness enthusiasts.",
+      "keyFeatures": [
+        "User-friendly design and navigation",
+        "Responsive and mobile-friendly interface",
+        "Innovative search features",
+        "Engaging product descriptions and high-quality images",
+        "Seamless checkout process",
+        "Continuous updates and improvements"
+      ],
+      "technologies": [
+        "HTML5",
+        "SCSS",
+        "React.js",
+        "Ant Design (antd)",
+        "Formik for form management",
+        "Redux Toolkit for state management",
+        "Axios for API requests",
+        "Rest API(Laravel)"
+      ],
+      "challenge": "💡 CaliFit showcases my proficiency in crafting dynamic websites that prioritize user experience and data utilization. From user-friendly designs to dynamic content delivery, CaliFit embodies innovation and excellence in e-commerce."
+    },
+    {
+      "id": 3,
+      "projectName": "📊 CaliFit Dashboard 📊",
+      "briefDescription": "CaliFit Dashboard – an admin dashboard tailored for an e-commerce website. With its comprehensive overview and efficient management features, CaliFit Dashboard simplifies e-commerce management tasks for seamless operations.",
+      "keyFeatures": [
+        "Dashboard Page: An overview of important information.",
+        "User Authentication: Secure login and access control for authorized users.",
+        "Product Management: Easy control over product listings and updates.",
+        "Order Management: Efficient tracking of orders and order processing.",
+        "Coupon Management: Handling and monitoring of coupon codes and discounts."
+      ],
+      "technologies": [
+        "HTML5",
+        "CSS",
+        "Bootstrap",
+        "Ant Design (antd)",
+        "React.js",
+        "Formik for form management",
+        "Redux Toolkit for state management",
+        "Axios for API requests",
+        "Rest API (Laravel)"
+      ],
+      "challenge": "💡This admin dashboard project highlights my expertise in creating a user-friendly, data-driven interface for e-commerce management. It simplifies tasks such as product management, order tracking, and customer behavior analysis."
+    }
+  ]
+}

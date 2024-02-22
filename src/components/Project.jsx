@@ -4,9 +4,18 @@ import Tag from "./Tag";
 
 import AOS from "aos";
 import "../../node_modules/aos/dist/aos.css";
+import DescModal from "./DescModal";
 AOS.init();
 
-const Project = ({ image, name, description, language, lien }) => {
+const Project = ({
+  image,
+  name,
+  description,
+  language,
+  lien,
+  descriptions,
+}) => {
+  console.log(descriptions);
   return (
     <div className="project" data-aos="zoom-in">
       <div className="project-image">
@@ -14,7 +23,8 @@ const Project = ({ image, name, description, language, lien }) => {
       </div>
       <div className="project-info">
         <h2>{name}</h2>
-        <p>{description}</p>
+        <p>{descriptions?.briefDescription.split(" ").slice(0,18).join(" ")}...</p>
+        <DescModal description={descriptions}/>
         <div className="tools">
           {language?.map((e, index) => (
             <Tag title={e} key={index} />

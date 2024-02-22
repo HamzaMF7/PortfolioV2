@@ -7,12 +7,18 @@ import NotFound from "../components/NotFound";
 import Tag from "../components/Tag";
 import ScrollToTop from "../customHook/ScrollToTop";
 
+import descData from "../api/descriptions.json";
 
 const Projects = () => {
   const dispatch = useDispatch();
   const { filtredProjects, tags, isSuccess } = useSelector(
     (state) => state.project
   );
+  const {descriptions} = descData ;
+
+  // console.log('====================================');
+  // console.log(descriptions[1]);
+  // console.log('====================================');
 
   useEffect(() => {
     dispatch(getProjects());
@@ -35,7 +41,7 @@ const Projects = () => {
           </div>
           <div className="projects-box">
             {filtredProjects?.map((project) => (
-              <Project {...project} key={project.id} />
+              <Project {...project} descriptions={descriptions[project.id-1]} key={project.id} />
             ))}
           </div>
         </>
