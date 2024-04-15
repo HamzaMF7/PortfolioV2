@@ -2,6 +2,19 @@
   "descriptions": [
     {
       "id": 1,
+      "projectName": "📱 AppTesting Solutions Landing Page 📱",
+      "briefDescription": "Our landing page introduces a solution designed for app developers facing recent changes in Google Play's testing protocols. We offer a comprehensive testing service to ensure developers can navigate these updates seamlessly and certify their apps with confidence. With user-friendly navigation and compelling messaging, visitors learn how our platform simplifies the testing process and enhances app quality. Join us to optimize your app development journey amidst Google Play's evolving landscape.",
+      "keyFeatures": [
+        "User-friendly design and navigation",
+        "Responsive and mobile-friendly interface",
+        "Automated Testing",
+        "Rapid Feedback",
+        "Scalability"
+      ],
+      "technologies": ["HTML5", "SCSS", "Ant Design (antd)", "React.js"]
+    },
+    {
+      "id": 2,
       "projectName": "🚗 CarGo 🚗",
       "briefDescription": "CarGo is a front-end platform designed to streamline the rental car booking process, catering to a wide range of needs from daily errands to epic road trips. With its intuitive interface and diverse vehicle selection, CarGo makes booking a breeze.",
       "keyFeatures": [
@@ -31,7 +44,7 @@
       "challenge": "💡 One challenge I encountered during this project was implementing different component styles for the same device size. To overcome this, I leveraged styled components to achieve dynamic styling and ensure a seamless user experience."
     },
     {
-      "id": 2,
+      "id": 3,
       "projectName": "🏋️‍♂️ CaliFit 🏋️‍♂️",
       "briefDescription": "CaliFit – an e-commerce website dedicated to providing top-notch calisthenics gear. With its user-friendly design and innovative features, CaliFit revolutionizes the online shopping experience for fitness enthusiasts.",
       "keyFeatures": [
@@ -55,7 +68,7 @@
       "challenge": "💡 CaliFit showcases my proficiency in crafting dynamic websites that prioritize user experience and data utilization. From user-friendly designs to dynamic content delivery, CaliFit embodies innovation and excellence in e-commerce."
     },
     {
-      "id": 3,
+      "id": 4,
       "projectName": "📊 CaliFit Dashboard 📊",
       "briefDescription": "CaliFit Dashboard – an admin dashboard tailored for an e-commerce website. With its comprehensive overview and efficient management features, CaliFit Dashboard simplifies e-commerce management tasks for seamless operations.",
       "keyFeatures": [

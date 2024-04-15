@@ -15,7 +15,7 @@ const Project = ({
   lien,
   descriptions,
 }) => {
-  console.log(descriptions);
+  
   return (
     <div className="project" data-aos="zoom-in">
       <div className="project-image">
