@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/PortfolioV2/static/css/main.03d0e9a2.css",
-    "main.js": "/PortfolioV2/static/js/main.bc03a817.js",
+    "main.js": "/PortfolioV2/static/js/main.2fdfee48.js",
     "static/js/787.d9a20797.chunk.js": "/PortfolioV2/static/js/787.d9a20797.chunk.js",
     "static/media/CV_hamza_maerof.pdf": "/PortfolioV2/static/media/CV_hamza_maerof.6e3b625afe443b3e6d0d.pdf",
     "static/media/img1.webp": "/PortfolioV2/static/media/img1.d6d624d887f7d5b59fef.webp",
     "static/media/img2.webp": "/PortfolioV2/static/media/img2.d5b48b06dd16aa6686be.webp",
+    "static/media/AppTesters-thumbnail.webp": "/PortfolioV2/static/media/AppTesters-thumbnail.f81782cb1db222420148.webp",
     "static/media/img4.webp": "/PortfolioV2/static/media/img4.8fdd52ac998a76527a39.webp",
     "static/media/carRentalThumbnail.webp": "/PortfolioV2/static/media/carRentalThumbnail.72c3e24f2c721d38f719.webp",
     "static/media/img8.webp": "/PortfolioV2/static/media/img8.a4bd263c155fef1f3bc9.webp",
@@ -14,11 +15,11 @@
     "static/media/img3.webp": "/PortfolioV2/static/media/img3.a2ce1bef8bea85ac6c66.webp",
     "index.html": "/PortfolioV2/index.html",
     "main.03d0e9a2.css.map": "/PortfolioV2/static/css/main.03d0e9a2.css.map",
-    "main.bc03a817.js.map": "/PortfolioV2/static/js/main.bc03a817.js.map",
+    "main.2fdfee48.js.map": "/PortfolioV2/static/js/main.2fdfee48.js.map",
     "787.d9a20797.chunk.js.map": "/PortfolioV2/static/js/787.d9a20797.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03d0e9a2.css",
-    "static/js/main.bc03a817.js"
+    "static/js/main.2fdfee48.js"
   ]
 }
